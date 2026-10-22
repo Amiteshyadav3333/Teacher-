@@ -1,18 +1,22 @@
+cat > .gitignore << 'EOF'
 # Secrets
 .env
 .env.*
 !.env.example
-
-# Virtual environments
-livekit-env/
-venv/
-.venv/
+*.pem
+*.key
+credentials.json
+service-account*.json
 
 # Python
 __pycache__/
 *.pyc
+venv/
+.venv/
+.ipynb_checkpoints/
 
-# OS / editor
+# macOS / editor
 .DS_Store
-.idea/
 .vscode/
+.idea/
+EOF
